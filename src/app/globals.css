@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +28,129 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.border-inset {
+  border-style: inset;
+  border-width: 2px;
+  border-top-color: black;
+  border-left-color: black;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.border-outset {
+  border-style: outset;
+  border-width: 2px;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: black;
+  border-bottom-color: black;
+}
+
+.border-inset-hover:hover {
+  border-style: inset;
+  border-width: 1px;
+  border-top-color: rgb(128, 128, 128) !important;
+  border-left-color: rgb(128, 128, 128) !important;
+  border-right-color: white !important;
+  border-bottom-color: white !important;
+}
+
+.border-outset-hover:hover {
+  border-style: outset;
+  border-width: 1px;
+  border-top-color: white !important;
+  border-left-color: white !important;
+  border-right-color: rgb(128, 128, 128) !important;
+  border-bottom-color: rgb(128, 128, 128) !important;
+}
+
+.time {
+  border-width: 1px;
+}
+
+.grid-sys {
+  grid-template-columns: repeat(auto-fill, 75px);
+  grid-template-rows: repeat(auto-fill, 75px);
+}
+
+.selected {
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+.close {
+  border-width: 2px;
+  border-style: outset;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: black;
+  border-bottom-color: black;
+}
+
+.close:active {
+  border-style: inset;
+  border-top-color: black;
+  border-left-color: black;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 12px;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: auto;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAG0lEQVQYV2P8/////4MHDzIwHjhw4L+9vT0DAHAFCj6esq3FAAAAAElFTkSuQmCC");
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #c1c1c1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 1px;
+  border-style: inset;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+::-webkit-scrollbar-button {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAJCAYAAABaMo5wAAAAW0lEQVQ4T2NkGGSAcZC5h4FWDvrPwEC02ShqkR0EkkAHuBxMyEKYWYQ8jKEOXQOyo/A5BuZwqqvBZiA+3xMbilQLIWqlcUJRimwPzjRELcdQZA6hREeR4eRoBgBoXhAK6oiMhwAAAABJRU5ErkJggg==");
+  background-color: #c1c1c1;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+::-webkit-scrollbar-button:vertical {
+  width: 10px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-button:horizontal {
+  height: 10px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-button:vertical:start {
+  background-position: 27px 0;
+}
+
+::-webkit-scrollbar-button:horizontal:start {
+  background-position: 9px 0;
+}
+::-webkit-scrollbar-button:horizontal:end {
+  background-position: 19px 0;
 }
